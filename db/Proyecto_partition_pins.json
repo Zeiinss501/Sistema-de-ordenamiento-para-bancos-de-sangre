@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Fin",
+					"strict" : false
+				},
+				{
+					"name" : "DIRECCIONRAM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DIRECCIONRAM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DIRECCIONRAM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DRECCIONROM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DRECCIONROM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DRECCIONROM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DRECCIONROM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DRECCIONROM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q_Cantidad[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Q_Cantidad[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Q_Cantidad[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q_Cantidad[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q_Cantidad[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q_Tipo[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q_Tipo[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q_Tipo[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDARAM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDARAM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDARAM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDARAM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDARAM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SANGREROM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SANGREROM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SANGREROM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SOSTENIMIENTOJMAS1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SOSTENIMIENTOJMAS1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SOSTENIMIENTOJMAS1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SOSTENIMIENTOJMAS1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SOSTENIMIENTOJMAS1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SOSTENIMIENTOSJ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SOSTENIMIENTOSJ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SOSTENIMIENTOSJ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SOSTENIMIENTOSJ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SOSTENIMIENTOSJ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Mostrar",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "Resetn",
+					"strict" : false
+				},
+				{
+					"name" : "Start",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

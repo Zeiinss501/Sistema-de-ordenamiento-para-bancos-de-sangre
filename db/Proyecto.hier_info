@@ -1,0 +1,965 @@
+|Diagram
+Fin <= MSS:inst42.Fin
+Clock => MSS:inst42.Clk
+Clock => Counter_Generic:inst1.Clock
+Clock => Counter_Generic:inst29.Clock
+Clock => Sostenimiento_generic:inst35.Clock
+Clock => RAM:inst26.Clock
+Clock => Counter_Generic:inst30.Clock
+Clock => Counter_Generic:inst5.Clock
+Clock => Counter_Generic:inst6.Clock
+Clock => Counter_Generic:inst7.Clock
+Clock => Counter_Generic:inst8.Clock
+Clock => Counter_Generic:inst9.Clock
+Clock => Counter_Generic:inst10.Clock
+Clock => Counter_Generic:inst11.Clock
+Clock => Counter_Generic:inst12.Clock
+Clock => Sostenimiento_generic:inst36.Clock
+Clock => RAM:inst27.Clock
+Clock => Sostenimiento_generic:inst37.Clock
+Clock => Sostenimiento_generic:inst38.Clock
+Resetn => MSS:inst42.Resetn
+Resetn => Counter_Generic:inst1.Resetn
+Resetn => Counter_Generic:inst29.Resetn
+Resetn => Sostenimiento_generic:inst35.Resetn
+Resetn => Counter_Generic:inst30.Resetn
+Resetn => Counter_Generic:inst5.Resetn
+Resetn => Counter_Generic:inst6.Resetn
+Resetn => Counter_Generic:inst7.Resetn
+Resetn => Counter_Generic:inst8.Resetn
+Resetn => Counter_Generic:inst9.Resetn
+Resetn => Counter_Generic:inst10.Resetn
+Resetn => Counter_Generic:inst11.Resetn
+Resetn => Counter_Generic:inst12.Resetn
+Resetn => Sostenimiento_generic:inst36.Resetn
+Resetn => Sostenimiento_generic:inst37.Resetn
+Resetn => Sostenimiento_generic:inst38.Resetn
+Start => MSS:inst42.Start
+Mostrar => MSS:inst42.Mostrar
+DIRECCIONRAM[0] <= DirRAM[0].DB_MAX_OUTPUT_PORT_TYPE
+DIRECCIONRAM[1] <= DirRAM[1].DB_MAX_OUTPUT_PORT_TYPE
+DIRECCIONRAM[2] <= DirRAM[2].DB_MAX_OUTPUT_PORT_TYPE
+DRECCIONROM[0] <= DirRom[0].DB_MAX_OUTPUT_PORT_TYPE
+DRECCIONROM[1] <= DirRom[1].DB_MAX_OUTPUT_PORT_TYPE
+DRECCIONROM[2] <= DirRom[2].DB_MAX_OUTPUT_PORT_TYPE
+DRECCIONROM[3] <= DirRom[3].DB_MAX_OUTPUT_PORT_TYPE
+DRECCIONROM[4] <= DirRom[4].DB_MAX_OUTPUT_PORT_TYPE
+Q_Cantidad[0] <= Buffer_tristate_generic:inst40.Salida[0]
+Q_Cantidad[1] <= Buffer_tristate_generic:inst40.Salida[1]
+Q_Cantidad[2] <= Buffer_tristate_generic:inst40.Salida[2]
+Q_Cantidad[3] <= Buffer_tristate_generic:inst40.Salida[3]
+Q_Cantidad[4] <= Buffer_tristate_generic:inst40.Salida[4]
+Q_Tipo[0] <= Buffer_tristate_generic:inst41.Salida[0]
+Q_Tipo[1] <= Buffer_tristate_generic:inst41.Salida[1]
+Q_Tipo[2] <= Buffer_tristate_generic:inst41.Salida[2]
+SALIDARAM[0] <= Cantidad[0].DB_MAX_OUTPUT_PORT_TYPE
+SALIDARAM[1] <= Cantidad[1].DB_MAX_OUTPUT_PORT_TYPE
+SALIDARAM[2] <= Cantidad[2].DB_MAX_OUTPUT_PORT_TYPE
+SALIDARAM[3] <= Cantidad[3].DB_MAX_OUTPUT_PORT_TYPE
+SALIDARAM[4] <= Cantidad[4].DB_MAX_OUTPUT_PORT_TYPE
+SANGREROM[0] <= Sangre[0].DB_MAX_OUTPUT_PORT_TYPE
+SANGREROM[1] <= Sangre[1].DB_MAX_OUTPUT_PORT_TYPE
+SANGREROM[2] <= Sangre[2].DB_MAX_OUTPUT_PORT_TYPE
+SOSTENIMIENTOJMAS1[0] <= Cantidad_j_mas_uno[0].DB_MAX_OUTPUT_PORT_TYPE
+SOSTENIMIENTOJMAS1[1] <= Cantidad_j_mas_uno[1].DB_MAX_OUTPUT_PORT_TYPE
+SOSTENIMIENTOJMAS1[2] <= Cantidad_j_mas_uno[2].DB_MAX_OUTPUT_PORT_TYPE
+SOSTENIMIENTOJMAS1[3] <= Cantidad_j_mas_uno[3].DB_MAX_OUTPUT_PORT_TYPE
+SOSTENIMIENTOJMAS1[4] <= Cantidad_j_mas_uno[4].DB_MAX_OUTPUT_PORT_TYPE
+SOSTENIMIENTOSJ[0] <= Cantidad_j[0].DB_MAX_OUTPUT_PORT_TYPE
+SOSTENIMIENTOSJ[1] <= Cantidad_j[1].DB_MAX_OUTPUT_PORT_TYPE
+SOSTENIMIENTOSJ[2] <= Cantidad_j[2].DB_MAX_OUTPUT_PORT_TYPE
+SOSTENIMIENTOSJ[3] <= Cantidad_j[3].DB_MAX_OUTPUT_PORT_TYPE
+SOSTENIMIENTOSJ[4] <= Cantidad_j[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|MSS:inst42
+Clk => y~1.DATAIN
+Resetn => y~3.DATAIN
+Start => y.DATAB
+Start => Selector0.IN1
+Start => Selector1.IN2
+Limite_ROM => y.DATAB
+Limite_ROM => y.DATAB
+Limite_i => Selector4.IN3
+Limite_i => y.DATAB
+Intercambiar => y.DATAB
+Intercambiar => Selector3.IN2
+Limite_j => y.DATAB
+Limite_j => y.DATAB
+Mostrar => y.DATAB
+Mostrar => Selector4.IN1
+Mostrar => Selector5.IN2
+jmax => Selector0.IN3
+jmax => Selector2.IN3
+jmax => y.DATAB
+jmax => y.DATAB
+RorW <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+En_Decoder <= En_Decoder.DB_MAX_OUTPUT_PORT_TYPE
+En_DirROM <= En_DirROM.DB_MAX_OUTPUT_PORT_TYPE
+En_j <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Ld_j <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+En_i <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+Ld_i <= Ld_i.DB_MAX_OUTPUT_PORT_TYPE
+En_1 <= En_1.DB_MAX_OUTPUT_PORT_TYPE
+En_2 <= En_2.DB_MAX_OUTPUT_PORT_TYPE
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= S1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= S2.DB_MAX_OUTPUT_PORT_TYPE
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+Fin <= Fin.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Comparator_Generic:inst3
+A[0] => LessThan0.IN5
+A[0] => Equal0.IN4
+A[0] => LessThan1.IN5
+A[1] => LessThan0.IN4
+A[1] => Equal0.IN3
+A[1] => LessThan1.IN4
+A[2] => LessThan0.IN3
+A[2] => Equal0.IN2
+A[2] => LessThan1.IN3
+A[3] => LessThan0.IN2
+A[3] => Equal0.IN1
+A[3] => LessThan1.IN2
+A[4] => LessThan0.IN1
+A[4] => Equal0.IN0
+A[4] => LessThan1.IN1
+B[0] => LessThan0.IN10
+B[0] => Equal0.IN9
+B[0] => LessThan1.IN10
+B[1] => LessThan0.IN9
+B[1] => Equal0.IN8
+B[1] => LessThan1.IN9
+B[2] => LessThan0.IN8
+B[2] => Equal0.IN7
+B[2] => LessThan1.IN8
+B[3] => LessThan0.IN7
+B[3] => Equal0.IN6
+B[3] => LessThan1.IN7
+B[4] => LessThan0.IN6
+B[4] => Equal0.IN5
+B[4] => LessThan1.IN6
+AMayorB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AIgualB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AMenorB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Counter_Generic:inst1
+Enable => process_0.IN0
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Load => process_0.IN1
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Data[3] => Q.DATAB
+Data[4] => Q.DATAB
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[3]~reg0.ACLR
+Resetn => Q[4]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Comparator_Generic:inst31
+A[0] => LessThan0.IN3
+A[0] => Equal0.IN2
+A[0] => LessThan1.IN3
+A[1] => LessThan0.IN2
+A[1] => Equal0.IN1
+A[1] => LessThan1.IN2
+A[2] => LessThan0.IN1
+A[2] => Equal0.IN0
+A[2] => LessThan1.IN1
+B[0] => LessThan0.IN6
+B[0] => Equal0.IN5
+B[0] => LessThan1.IN6
+B[1] => LessThan0.IN5
+B[1] => Equal0.IN4
+B[1] => LessThan1.IN5
+B[2] => LessThan0.IN4
+B[2] => Equal0.IN3
+B[2] => LessThan1.IN4
+AMayorB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AIgualB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AMenorB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Counter_Generic:inst29
+Enable => process_0.IN0
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Load => process_0.IN1
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Comparator_Generic:inst39
+A[0] => LessThan0.IN5
+A[0] => Equal0.IN4
+A[0] => LessThan1.IN5
+A[1] => LessThan0.IN4
+A[1] => Equal0.IN3
+A[1] => LessThan1.IN4
+A[2] => LessThan0.IN3
+A[2] => Equal0.IN2
+A[2] => LessThan1.IN3
+A[3] => LessThan0.IN2
+A[3] => Equal0.IN1
+A[3] => LessThan1.IN2
+A[4] => LessThan0.IN1
+A[4] => Equal0.IN0
+A[4] => LessThan1.IN1
+B[0] => LessThan0.IN10
+B[0] => Equal0.IN9
+B[0] => LessThan1.IN10
+B[1] => LessThan0.IN9
+B[1] => Equal0.IN8
+B[1] => LessThan1.IN9
+B[2] => LessThan0.IN8
+B[2] => Equal0.IN7
+B[2] => LessThan1.IN8
+B[3] => LessThan0.IN7
+B[3] => Equal0.IN6
+B[3] => LessThan1.IN7
+B[4] => LessThan0.IN6
+B[4] => Equal0.IN5
+B[4] => LessThan1.IN6
+AMayorB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AIgualB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AMenorB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Sostenimiento_generic:inst35
+Data[0] => Q[0]~reg0.DATAIN
+Data[1] => Q[1]~reg0.DATAIN
+Data[2] => Q[2]~reg0.DATAIN
+Data[3] => Q[3]~reg0.DATAIN
+Data[4] => Q[4]~reg0.DATAIN
+En => Q[4]~reg0.ENA
+En => Q[3]~reg0.ENA
+En => Q[2]~reg0.ENA
+En => Q[1]~reg0.ENA
+En => Q[0]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[3]~reg0.ACLR
+Resetn => Q[4]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|RAM:inst26
+Data[0] => Rammemory~7.DATAIN
+Data[0] => Rammemory.DATAIN
+Data[1] => Rammemory~6.DATAIN
+Data[1] => Rammemory.DATAIN1
+Data[2] => Rammemory~5.DATAIN
+Data[2] => Rammemory.DATAIN2
+Data[3] => Rammemory~4.DATAIN
+Data[3] => Rammemory.DATAIN3
+Data[4] => Rammemory~3.DATAIN
+Data[4] => Rammemory.DATAIN4
+Address[0] => Rammemory~2.DATAIN
+Address[0] => Rammemory.WADDR
+Address[0] => Rammemory.RADDR
+Address[1] => Rammemory~1.DATAIN
+Address[1] => Rammemory.WADDR1
+Address[1] => Rammemory.RADDR1
+Address[2] => Rammemory~0.DATAIN
+Address[2] => Rammemory.WADDR2
+Address[2] => Rammemory.RADDR2
+R_W => Rammemory~8.DATAIN
+R_W => Rammemory.WE
+Clock => Rammemory~8.CLK
+Clock => Rammemory~0.CLK
+Clock => Rammemory~1.CLK
+Clock => Rammemory~2.CLK
+Clock => Rammemory~3.CLK
+Clock => Rammemory~4.CLK
+Clock => Rammemory~5.CLK
+Clock => Rammemory~6.CLK
+Clock => Rammemory~7.CLK
+Clock => Rammemory.CLK0
+Q[0] <= Rammemory.DATAOUT
+Q[1] <= Rammemory.DATAOUT1
+Q[2] <= Rammemory.DATAOUT2
+Q[3] <= Rammemory.DATAOUT3
+Q[4] <= Rammemory.DATAOUT4
+
+
+|Diagram|Mux_2to1_generic:inst25
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+I0[0] => Q.DATAB
+I0[1] => Q.DATAB
+I0[2] => Q.DATAB
+I1[0] => Q.DATAA
+I1[1] => Q.DATAA
+I1[2] => Q.DATAA
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Counter_Generic:inst30
+Enable => process_0.IN0
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Load => process_0.IN1
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Sumador_3bits:inst34
+A[0] => Add0.IN3
+A[1] => Add0.IN2
+A[2] => Add0.IN1
+B[0] => Add0.IN6
+B[1] => Add0.IN5
+B[2] => Add0.IN4
+Salida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+Salida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+Salida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Mux_2to1_generic:inst21
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+I0[0] => Q.DATAB
+I0[1] => Q.DATAB
+I0[2] => Q.DATAB
+I0[3] => Q.DATAB
+I0[4] => Q.DATAB
+I1[0] => Q.DATAA
+I1[1] => Q.DATAA
+I1[2] => Q.DATAA
+I1[3] => Q.DATAA
+I1[4] => Q.DATAA
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Mux_8to1_5bits:inst28
+Sel[0] => Mux0.IN2
+Sel[0] => Mux1.IN2
+Sel[0] => Mux2.IN2
+Sel[0] => Mux3.IN2
+Sel[0] => Mux4.IN2
+Sel[1] => Mux0.IN1
+Sel[1] => Mux1.IN1
+Sel[1] => Mux2.IN1
+Sel[1] => Mux3.IN1
+Sel[1] => Mux4.IN1
+Sel[2] => Mux0.IN0
+Sel[2] => Mux1.IN0
+Sel[2] => Mux2.IN0
+Sel[2] => Mux3.IN0
+Sel[2] => Mux4.IN0
+I0[0] => Mux4.IN3
+I0[1] => Mux3.IN3
+I0[2] => Mux2.IN3
+I0[3] => Mux1.IN3
+I0[4] => Mux0.IN3
+I1[0] => Mux4.IN4
+I1[1] => Mux3.IN4
+I1[2] => Mux2.IN4
+I1[3] => Mux1.IN4
+I1[4] => Mux0.IN4
+I2[0] => Mux4.IN5
+I2[1] => Mux3.IN5
+I2[2] => Mux2.IN5
+I2[3] => Mux1.IN5
+I2[4] => Mux0.IN5
+I3[0] => Mux4.IN6
+I3[1] => Mux3.IN6
+I3[2] => Mux2.IN6
+I3[3] => Mux1.IN6
+I3[4] => Mux0.IN6
+I4[0] => Mux4.IN7
+I4[1] => Mux3.IN7
+I4[2] => Mux2.IN7
+I4[3] => Mux1.IN7
+I4[4] => Mux0.IN7
+I5[0] => Mux4.IN8
+I5[1] => Mux3.IN8
+I5[2] => Mux2.IN8
+I5[3] => Mux1.IN8
+I5[4] => Mux0.IN8
+I6[0] => Mux4.IN9
+I6[1] => Mux3.IN9
+I6[2] => Mux2.IN9
+I6[3] => Mux1.IN9
+I6[4] => Mux0.IN9
+I7[0] => Mux4.IN10
+I7[1] => Mux3.IN10
+I7[2] => Mux2.IN10
+I7[3] => Mux1.IN10
+I7[4] => Mux0.IN10
+Q[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Counter_Generic:inst5
+Enable => process_0.IN0
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Load => process_0.IN1
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Data[3] => Q.DATAB
+Data[4] => Q.DATAB
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[3]~reg0.ACLR
+Resetn => Q[4]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Decoder_3to8:inst4
+Data[0] => Mux0.IN10
+Data[0] => Mux1.IN10
+Data[0] => Mux2.IN10
+Data[0] => Mux3.IN10
+Data[0] => Mux4.IN10
+Data[0] => Mux5.IN10
+Data[0] => Mux6.IN10
+Data[0] => Mux7.IN10
+Data[1] => Mux0.IN9
+Data[1] => Mux1.IN9
+Data[1] => Mux2.IN9
+Data[1] => Mux3.IN9
+Data[1] => Mux4.IN9
+Data[1] => Mux5.IN9
+Data[1] => Mux6.IN9
+Data[1] => Mux7.IN9
+Data[2] => Mux0.IN8
+Data[2] => Mux1.IN8
+Data[2] => Mux2.IN8
+Data[2] => Mux3.IN8
+Data[2] => Mux4.IN8
+Data[2] => Mux5.IN8
+Data[2] => Mux6.IN8
+Data[2] => Mux7.IN8
+Enable => Y0.OUTPUTSELECT
+Enable => Y1.OUTPUTSELECT
+Enable => Y2.OUTPUTSELECT
+Enable => Y3.OUTPUTSELECT
+Enable => Y4.OUTPUTSELECT
+Enable => Y5.OUTPUTSELECT
+Enable => Y6.OUTPUTSELECT
+Enable => Y7.OUTPUTSELECT
+Y0 <= Y0.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= Y1.DB_MAX_OUTPUT_PORT_TYPE
+Y2 <= Y2.DB_MAX_OUTPUT_PORT_TYPE
+Y3 <= Y3.DB_MAX_OUTPUT_PORT_TYPE
+Y4 <= Y4.DB_MAX_OUTPUT_PORT_TYPE
+Y5 <= Y5.DB_MAX_OUTPUT_PORT_TYPE
+Y6 <= Y6.DB_MAX_OUTPUT_PORT_TYPE
+Y7 <= Y7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|ROM:inst
+Address[0] => Rammemory.RADDR
+Address[1] => Rammemory.RADDR1
+Address[2] => Rammemory.RADDR2
+Address[3] => Rammemory.RADDR3
+Address[4] => Rammemory.RADDR4
+Data[0] <= Rammemory.DATAOUT
+Data[1] <= Rammemory.DATAOUT1
+Data[2] <= Rammemory.DATAOUT2
+
+
+|Diagram|Counter_Generic:inst6
+Enable => process_0.IN0
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Load => process_0.IN1
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Data[3] => Q.DATAB
+Data[4] => Q.DATAB
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[3]~reg0.ACLR
+Resetn => Q[4]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Counter_Generic:inst7
+Enable => process_0.IN0
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Load => process_0.IN1
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Data[3] => Q.DATAB
+Data[4] => Q.DATAB
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[3]~reg0.ACLR
+Resetn => Q[4]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Counter_Generic:inst8
+Enable => process_0.IN0
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Load => process_0.IN1
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Data[3] => Q.DATAB
+Data[4] => Q.DATAB
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[3]~reg0.ACLR
+Resetn => Q[4]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Counter_Generic:inst9
+Enable => process_0.IN0
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Load => process_0.IN1
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Data[3] => Q.DATAB
+Data[4] => Q.DATAB
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[3]~reg0.ACLR
+Resetn => Q[4]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Counter_Generic:inst10
+Enable => process_0.IN0
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Load => process_0.IN1
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Data[3] => Q.DATAB
+Data[4] => Q.DATAB
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[3]~reg0.ACLR
+Resetn => Q[4]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Counter_Generic:inst11
+Enable => process_0.IN0
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Load => process_0.IN1
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Data[3] => Q.DATAB
+Data[4] => Q.DATAB
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[3]~reg0.ACLR
+Resetn => Q[4]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Counter_Generic:inst12
+Enable => process_0.IN0
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Enable => Q.OUTPUTSELECT
+Load => process_0.IN1
+Data[0] => Q.DATAB
+Data[1] => Q.DATAB
+Data[2] => Q.DATAB
+Data[3] => Q.DATAB
+Data[4] => Q.DATAB
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[3]~reg0.ACLR
+Resetn => Q[4]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Mux_2to1_generic:inst22
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+I0[0] => Q.DATAB
+I0[1] => Q.DATAB
+I0[2] => Q.DATAB
+I0[3] => Q.DATAB
+I0[4] => Q.DATAB
+I1[0] => Q.DATAA
+I1[1] => Q.DATAA
+I1[2] => Q.DATAA
+I1[3] => Q.DATAA
+I1[4] => Q.DATAA
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Sostenimiento_generic:inst36
+Data[0] => Q[0]~reg0.DATAIN
+Data[1] => Q[1]~reg0.DATAIN
+Data[2] => Q[2]~reg0.DATAIN
+Data[3] => Q[3]~reg0.DATAIN
+Data[4] => Q[4]~reg0.DATAIN
+En => Q[4]~reg0.ENA
+En => Q[3]~reg0.ENA
+En => Q[2]~reg0.ENA
+En => Q[1]~reg0.ENA
+En => Q[0]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[3]~reg0.ACLR
+Resetn => Q[4]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Comparator_Generic:inst33
+A[0] => LessThan0.IN3
+A[0] => Equal0.IN2
+A[0] => LessThan1.IN3
+A[1] => LessThan0.IN2
+A[1] => Equal0.IN1
+A[1] => LessThan1.IN2
+A[2] => LessThan0.IN1
+A[2] => Equal0.IN0
+A[2] => LessThan1.IN1
+B[0] => LessThan0.IN6
+B[0] => Equal0.IN5
+B[0] => LessThan1.IN6
+B[1] => LessThan0.IN5
+B[1] => Equal0.IN4
+B[1] => LessThan1.IN5
+B[2] => LessThan0.IN4
+B[2] => Equal0.IN3
+B[2] => LessThan1.IN4
+AMayorB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AIgualB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AMenorB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Restador_3bits:inst32
+A[0] => Add0.IN6
+A[1] => Add0.IN5
+A[2] => Add0.IN4
+B[0] => Add0.IN3
+B[1] => Add0.IN2
+B[2] => Add0.IN1
+Salida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+Salida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+Salida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Buffer_tristate_generic:inst40
+Entrada[0] => Salida[0].DATAIN
+Entrada[1] => Salida[1].DATAIN
+Entrada[2] => Salida[2].DATAIN
+Entrada[3] => Salida[3].DATAIN
+Entrada[4] => Salida[4].DATAIN
+En => Salida[0].OE
+En => Salida[1].OE
+En => Salida[2].OE
+En => Salida[3].OE
+En => Salida[4].OE
+Salida[0] <= Salida[0].DB_MAX_OUTPUT_PORT_TYPE
+Salida[1] <= Salida[1].DB_MAX_OUTPUT_PORT_TYPE
+Salida[2] <= Salida[2].DB_MAX_OUTPUT_PORT_TYPE
+Salida[3] <= Salida[3].DB_MAX_OUTPUT_PORT_TYPE
+Salida[4] <= Salida[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Buffer_tristate_generic:inst41
+Entrada[0] => Salida[0].DATAIN
+Entrada[1] => Salida[1].DATAIN
+Entrada[2] => Salida[2].DATAIN
+En => Salida[0].OE
+En => Salida[1].OE
+En => Salida[2].OE
+Salida[0] <= Salida[0].DB_MAX_OUTPUT_PORT_TYPE
+Salida[1] <= Salida[1].DB_MAX_OUTPUT_PORT_TYPE
+Salida[2] <= Salida[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|RAM:inst27
+Data[0] => Rammemory~5.DATAIN
+Data[0] => Rammemory.DATAIN
+Data[1] => Rammemory~4.DATAIN
+Data[1] => Rammemory.DATAIN1
+Data[2] => Rammemory~3.DATAIN
+Data[2] => Rammemory.DATAIN2
+Address[0] => Rammemory~2.DATAIN
+Address[0] => Rammemory.WADDR
+Address[0] => Rammemory.RADDR
+Address[1] => Rammemory~1.DATAIN
+Address[1] => Rammemory.WADDR1
+Address[1] => Rammemory.RADDR1
+Address[2] => Rammemory~0.DATAIN
+Address[2] => Rammemory.WADDR2
+Address[2] => Rammemory.RADDR2
+R_W => Rammemory~6.DATAIN
+R_W => Rammemory.WE
+Clock => Rammemory~6.CLK
+Clock => Rammemory~0.CLK
+Clock => Rammemory~1.CLK
+Clock => Rammemory~2.CLK
+Clock => Rammemory~3.CLK
+Clock => Rammemory~4.CLK
+Clock => Rammemory~5.CLK
+Clock => Rammemory.CLK0
+Q[0] <= Rammemory.DATAOUT
+Q[1] <= Rammemory.DATAOUT1
+Q[2] <= Rammemory.DATAOUT2
+
+
+|Diagram|Mux_2to1_generic:inst23
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+I0[0] => Q.DATAB
+I0[1] => Q.DATAB
+I0[2] => Q.DATAB
+I1[0] => Q.DATAA
+I1[1] => Q.DATAA
+I1[2] => Q.DATAA
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Mux_2to1_generic:inst24
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+Sel => Q.OUTPUTSELECT
+I0[0] => Q.DATAB
+I0[1] => Q.DATAB
+I0[2] => Q.DATAB
+I1[0] => Q.DATAA
+I1[1] => Q.DATAA
+I1[2] => Q.DATAA
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Sostenimiento_generic:inst37
+Data[0] => Q[0]~reg0.DATAIN
+Data[1] => Q[1]~reg0.DATAIN
+Data[2] => Q[2]~reg0.DATAIN
+En => Q[2]~reg0.ENA
+En => Q[1]~reg0.ENA
+En => Q[0]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagram|Sostenimiento_generic:inst38
+Data[0] => Q[0]~reg0.DATAIN
+Data[1] => Q[1]~reg0.DATAIN
+Data[2] => Q[2]~reg0.DATAIN
+En => Q[2]~reg0.ENA
+En => Q[1]~reg0.ENA
+En => Q[0]~reg0.ENA
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
